@@ -2,10 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Overwolf Auth</title>
   </head>
   <body>
-    Hellooooo
+    <script>
+      const customScheme = "overwolf-extension";
+      const uuid = "mgnhlhhgijgpolfhianfppdnbaaleeadejegcngg";
+      const windowName = "login.html";
+
+      (function () {
+        console.log("redirect.html windowName", windowName);
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get("token");
+
+        window.location.replace(
+          `${customScheme}://${uuid}/${windowName}?token=${token}`
+        );
+      })();
+    </script>
   </body>
 </html>
