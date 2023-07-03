@@ -6,20 +6,21 @@
   </head>
   <body>
     <script>
-      const customScheme = "overwolf-extension";
+      const customScheme = "testscheme";
       const uuid = "mgnhlhhgijgpolfhianfppdnbaaleeadejegcngg";
       const windowName = "login.html";
 
-      (function () {
-        console.log("redirect.html windowName", windowName);
-
+      console.log("ASD", customScheme, uuid, windowName);
+      /*  (function () {
         const urlParams = new URLSearchParams(window.location.search);
         const token = urlParams.get("token");
 
-        window.location.replace(
-          `${customScheme}://${uuid}/${windowName}?token=${token}`
-        );
-      })();
+        const url = `${customScheme}://${uuid}/${windowName}?token=${token}`;
+
+        console.log("url", url);
+
+        window.location.replace(url);
+      })(); */
     </script>
   </body>
 </html>
